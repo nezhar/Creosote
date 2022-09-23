@@ -220,6 +220,9 @@ def main():
         # loop through all the files with vulnerabilities and print out info
         for f in files_with_vulns:
             f.process()
+        
+        # set exit code for use in ci
+        sys.exit(1)
 
 # call main
 if __name__ == "__main__":
